@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      AppLoad MobileHybrid Epi
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div style="display:flex; flex-direction:column;justify-content:center">
+    <button ion-button (click)="capture()">Take App Photo</button>
+
+    <img [src]="captureDataUrl"  *ngIf="captureDataUrl"/>
+
+    <button ion-button (click)="upload()" *ngIf="captureDataUrl">Firebase AppLoad</button>
+    
+  </div>
+</ion-content>
